@@ -1,0 +1,34 @@
+## Discussion
+- [1st place with representation learning](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction/discussion/44629)
+  - FE은 거의 하지 않았다. 이 사람은 이 부분에 자신이 없어서 representation learning을 활용했다고 한다.
+  - Denoising autoencoders (DAE) are nice to find a better representation of the numeric data for later neural net supervised learning.
+    -  use train+test features to build the DAE
+    - denoising autoencoder tries to reconstruct the noisy version of the features
+    - noise를 만들때, 다른 row의 값을 가져와서 사용하는 방법
+- [3rd place solution](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction/discussion/44608)
+  - 큰 특징은 없다
+  - 1 lgb, 1 NN
+  - feature elimination을 잘한 것 같다.
+- [Ho (dis)similar are train and test data?](https://www.kaggle.com/c/porto-seguro-safe-driver-prediction/discussion/43453)
+  - adversarial validation 관련 내용
+  - train, test set을 pca를 통해 시각적으로 비교
+  - [covariate shift analysis](https://github.com/erlendd/covariate-shift-adaption) : analysis tells us whether there is a significant data distribution difference between two datasets
+
+## Kernel
+- [XGBoost](https://www.kaggle.com/aharless/xgboost-cv-lb-284)
+- [Train Test Similarity](https://www.kaggle.com/shikhar1/train-test-similarityhttps://www.kaggle.com/shikhar1/train-test-similarity)
+  - train = 1, test = 0 으로 만들어서 모델을 통해 분류한다.
+  - AUC가 0.5 근처로 나오면 train, test가 비슷한 분포를 갖는다고 할 수 있다.
+  - 이에 대한 이론적인 배경, 실습 설명 (covariate shift analysis)
+- [Resampling strategies for imbalanced datasets](https://www.kaggle.com/rafjaa/resampling-strategies-for-imbalanced-datasets)
+- [Python target encoding for categorical features](https://www.kaggle.com/ogrellier/python-target-encoding-for-categorical-features)
+  - target encoding을 하는데 smoothing을 더한다
+  - 제대로 이해하지 못했으나 나중에 필요할 때, 자세히 보자
+- (Dimensionality reduction (PCA, tSNE))[https://www.kaggle.com/tilii7/dimensionality-reduction-pca-tsne]
+  - 예시코드
+- [Feature selection : target permutations](https://www.kaggle.com/ogrellier/feature-selection-target-permutations)
+  - [permutation target importance paper](https://academic.oup.com/bioinformatics/article/26/10/1340/193348)
+  - feature permutation이 아니라 target이라 신기하다
+- [Boruta feature elimination](https://www.kaggle.com/tilii7/boruta-feature-elimination)
+  - tree 기반 모델을 위한 feature selection 방법이다
+  - package도 구현 되어 있다
