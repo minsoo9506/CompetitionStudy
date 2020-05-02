@@ -1,0 +1,6 @@
+- [Worth Seeing Posts and Notebooks](https://www.kaggle.com/c/bengaliai-cv19/discussion/127976)
+- [macro recall](https://www.kaggle.com/c/bengaliai-cv19/discussion/136021)
+- pytorch
+  - [AutoAugment](https://github.com/DeepVoltaire/AutoAugment)
+  - [fast autoaugment](https://github.com/kakaobrain/fast-autoaugment)
+  - [pretrained model](https://github.com/Cadene/pretrained-models.pytorch)
